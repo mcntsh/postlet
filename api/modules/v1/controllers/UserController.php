@@ -1,12 +1,10 @@
 <?php
-
 namespace app\modules\v1\controllers;
 
-use yii\web\Controller
+use yii\web\Controller;
 
 class UserController extends Controller
 {
-
   public function actionIndex()
   {
     echo 'Debugging: "d"';
@@ -15,5 +13,4 @@ class UserController extends Controller
     echo '</pre>';
     exit;
   }
-
 }

@@ -1,9 +1,7 @@
 <?php
 namespace app\modules\v1;
 
-use \yii\base\Module
-
-class Module extends Module
+class Module extends \yii\base\Module
 {
     public $controllerNamespace = 'app\modules\v1\controllers';
 
@@ -11,4 +9,5 @@ class Module extends Module
     {
         parent::init();
     }
+    
 }
