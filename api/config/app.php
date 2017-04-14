@@ -1,14 +1,14 @@
 <?php
 
-$params = require(__DIR__ . '/params.php');
+require(__DIR__ . '/bootstrap.php');
 
 $config = [
     'id' => 'basic',
-    'basePath' => dirname(__DIR__),
+    'basePath' => $APP_ROOT,
     'bootstrap' => ['log'],
     'modules' => [
         'v1' => [
-            'basePath' => '@app/modules/v1',
+            'basePath' => '@api/modules/v1',
             'class' => 'app\modules\v1\Module'
         ]
     ],
@@ -29,9 +29,6 @@ $config = [
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
-            // send all mails to a file by default. You have to set
-            // 'useFileTransport' to false and configure a transport
-            // for the mailer to send real emails.
             'useFileTransport' => true,
         ],
         'log' => [
@@ -43,7 +40,7 @@ $config = [
                 ],
             ],
         ],
-        'db' => require(__DIR__ . '/db.php'),
+        'db' => $COMMON_DB_CONFIG,
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
@@ -54,22 +51,5 @@ $config = [
     ],
     'params' => $params,
 ];
-
-if (YII_ENV_DEV) {
-    // configuration adjustments for 'dev' environment
-    $config['bootstrap'][] = 'debug';
-    $config['modules']['debug'] = [
-        'class' => 'yii\debug\Module',
-        // uncomment the following to add your IP if you are not connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
-    ];
-
-    $config['bootstrap'][] = 'gii';
-    $config['modules']['gii'] = [
-        'class' => 'yii\gii\Module',
-        // uncomment the following to add your IP if you are not connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
-    ];
-}
 
 return $config;

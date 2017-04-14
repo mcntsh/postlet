@@ -2,7 +2,7 @@
 
 namespace app\modules\v1\controllers;
 
-use yii\web\Controller;
+use yii\web\Controller
 
 class UserController extends Controller
 {
