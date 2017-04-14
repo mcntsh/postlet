@@ -1,0 +1,969 @@
+2017-04-14 20:41:57 [192.168.33.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/postlet/api/vendor/yiisoft/yii2/base/Module.php:532
+Stack trace:
+#0 /var/www/postlet/api/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#1 /var/www/postlet/api/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/postlet/api/public/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /var/www/postlet/api/vendor/yiisoft/yii2/web/Application.php:114
+Stack trace:
+#0 /var/www/postlet/api/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/postlet/api/public/index.php(12): yii\base\Application->run()
+#2 {main}
+2017-04-14 20:41:57 [192.168.33.1][-][-][info][application] $_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54741'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492202517.442
+    'REQUEST_TIME' => 1492202517
+]
+2017-04-14 20:42:47 [192.168.33.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/postlet/api/vendor/yiisoft/yii2/base/Module.php:532
+Stack trace:
+#0 /var/www/postlet/api/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#1 /var/www/postlet/api/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/postlet/api/public/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /var/www/postlet/api/vendor/yiisoft/yii2/web/Application.php:114
+Stack trace:
+#0 /var/www/postlet/api/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/postlet/api/public/index.php(12): yii\base\Application->run()
+#2 {main}
+2017-04-14 20:42:47 [192.168.33.1][-][-][info][application] $_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54741'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492202567.8406
+    'REQUEST_TIME' => 1492202567
+]
+2017-04-14 20:43:22 [192.168.33.1][-][-][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: /var/www/postlet/api/views/site/index.php in /var/www/postlet/api/vendor/yiisoft/yii2/base/View.php:229
+Stack trace:
+#0 /var/www/postlet/api/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/postle...', Array, Object(app\controllers\SiteController))
+#1 /var/www/postlet/api/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#2 /var/www/postlet/api/controllers/SiteController.php(64): yii\base\Controller->render('index')
+#3 [internal function]: app\controllers\SiteController->actionIndex()
+#4 /var/www/postlet/api/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /var/www/postlet/api/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/postlet/api/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#7 /var/www/postlet/api/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#8 /var/www/postlet/api/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/postlet/api/public/index.php(12): yii\base\Application->run()
+#10 {main}
+2017-04-14 20:43:22 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2017-04-14 20:43:22 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2017-04-14 20:43:22 [192.168.33.1][-][-][info][application] $_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54741'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492202602.2554
+    'REQUEST_TIME' => 1492202602
+]
+2017-04-14 20:43:28 [192.168.33.1][-][-][error][Error] Error: Class 'app\assets\AppAsset' not found in /var/www/postlet/api/views/layouts/main.php:12
+Stack trace:
+#0 /var/www/postlet/api/vendor/yiisoft/yii2/base/View.php(328): require()
+#1 /var/www/postlet/api/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/postle...', Array)
+#2 /var/www/postlet/api/vendor/yiisoft/yii2/base/Controller.php(396): yii\base\View->renderFile('/var/www/postle...', Array, Object(app\controllers\SiteController))
+#3 /var/www/postlet/api/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\Controller->renderContent('<div class="sit...')
+#4 /var/www/postlet/api/controllers/SiteController.php(64): yii\base\Controller->render('index')
+#5 [internal function]: app\controllers\SiteController->actionIndex()
+#6 /var/www/postlet/api/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/postlet/api/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/postlet/api/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#9 /var/www/postlet/api/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#10 /var/www/postlet/api/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/postlet/api/public/index.php(12): yii\base\Application->run()
+#12 {main}
+2017-04-14 20:43:28 [192.168.33.1][-][-][info][application] $_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54741'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492202608.1041
+    'REQUEST_TIME' => 1492202608
+]
+2017-04-14 20:43:33 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /var/www/postlet/api/views/layouts/main.php:76
+    in /var/www/postlet/api/controllers/SiteController.php:64
+2017-04-14 20:43:33 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2017-04-14 20:43:33 [192.168.33.1][-][-][info][application] $_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54741'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492202613.2935
+    'REQUEST_TIME' => 1492202613
+]
+2017-04-14 20:44:00 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /var/www/postlet/api/views/layouts/main.php:76
+    in /var/www/postlet/api/controllers/SiteController.php:64
+2017-04-14 20:44:00 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2017-04-14 20:44:00 [192.168.33.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜĞÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54769'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492202640.1551
+    'REQUEST_TIME' => 1492202640
+]
+2017-04-14 20:44:28 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /var/www/postlet/api/views/layouts/main.php:76
+    in /var/www/postlet/api/controllers/SiteController.php:64
+2017-04-14 20:44:28 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2017-04-14 20:44:28 [192.168.33.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜĞÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54772'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492202668.6067
+    'REQUEST_TIME' => 1492202668
+]
+2017-04-14 20:44:47 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /var/www/postlet/api/views/layouts/main.php:76
+    in /var/www/postlet/api/controllers/SiteController.php:64
+2017-04-14 20:44:47 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2017-04-14 20:44:46 [192.168.33.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜĞÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54769'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492202686.9371
+    'REQUEST_TIME' => 1492202686
+]
+2017-04-14 20:45:01 [192.168.33.1][-][-][error][ParseError] ParseError: syntax error, unexpected ':', expecting ',' or ')' in /var/www/postlet/api/controllers/SiteController.php:66
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 [internal function]: spl_autoload_call('app\\controllers...')
+#2 /var/www/postlet/api/vendor/yiisoft/yii2/base/Module.php(633): class_exists('app\\controllers...')
+#3 /var/www/postlet/api/vendor/yiisoft/yii2/base/Module.php(591): yii\base\Module->createControllerByID('site')
+#4 /var/www/postlet/api/vendor/yiisoft/yii2/base/Module.php(517): yii\base\Module->createController('')
+#5 /var/www/postlet/api/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#6 /var/www/postlet/api/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/postlet/api/public/index.php(12): yii\base\Application->run()
+#8 {main}
+2017-04-14 20:45:01 [192.168.33.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜĞÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54771'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492202701.2803
+    'REQUEST_TIME' => 1492202701
+]
+2017-04-14 20:45:09 [192.168.33.1][-][-][error][Error] Error: Call to undefined method Yii::app() in /var/www/postlet/api/controllers/SiteController.php:66
+Stack trace:
+#0 [internal function]: app\controllers\SiteController->actionIndex()
+#1 /var/www/postlet/api/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /var/www/postlet/api/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/postlet/api/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#4 /var/www/postlet/api/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#5 /var/www/postlet/api/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /var/www/postlet/api/public/index.php(12): yii\base\Application->run()
+#7 {main}
+2017-04-14 20:45:09 [192.168.33.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜĞÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54771'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492202709.443
+    'REQUEST_TIME' => 1492202709
+]
+2017-04-14 20:45:28 [192.168.33.1][-][-][error][ParseError] ParseError: syntax error, unexpected ';', expecting ',' or ')' in /var/www/postlet/api/controllers/SiteController.php:66
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 [internal function]: spl_autoload_call('app\\controllers...')
+#2 /var/www/postlet/api/vendor/yiisoft/yii2/base/Module.php(633): class_exists('app\\controllers...')
+#3 /var/www/postlet/api/vendor/yiisoft/yii2/base/Module.php(591): yii\base\Module->createControllerByID('site')
+#4 /var/www/postlet/api/vendor/yiisoft/yii2/base/Module.php(517): yii\base\Module->createController('')
+#5 /var/www/postlet/api/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#6 /var/www/postlet/api/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/postlet/api/public/index.php(12): yii\base\Application->run()
+#8 {main}
+2017-04-14 20:45:28 [192.168.33.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜĞÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54771'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492202728.3477
+    'REQUEST_TIME' => 1492202728
+]
+2017-04-14 20:45:32 [192.168.33.1][-][-][error][ReflectionException] ReflectionException: Class api\modules\v1\Module does not exist in /var/www/postlet/api/vendor/yiisoft/yii2/di/Container.php:424
+Stack trace:
+#0 /var/www/postlet/api/vendor/yiisoft/yii2/di/Container.php(424): ReflectionClass->__construct('api\\modules\\v1\\...')
+#1 /var/www/postlet/api/vendor/yiisoft/yii2/di/Container.php(364): yii\di\Container->getDependencies('api\\modules\\v1\\...')
+#2 /var/www/postlet/api/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('api\\modules\\v1\\...', Array, Array)
+#3 /var/www/postlet/api/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('api\\modules\\v1\\...', Array, Array)
+#4 /var/www/postlet/api/vendor/yiisoft/yii2/base/Module.php(423): yii\BaseYii::createObject(Array, Array)
+#5 /var/www/postlet/api/controllers/SiteController.php(66): yii\base\Module->getModule('v1')
+#6 [internal function]: app\controllers\SiteController->actionIndex()
+#7 /var/www/postlet/api/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/postlet/api/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/postlet/api/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#10 /var/www/postlet/api/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#11 /var/www/postlet/api/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/postlet/api/public/index.php(12): yii\base\Application->run()
+#13 {main}
+2017-04-14 20:45:32 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2017-04-14 20:45:32 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2017-04-14 20:45:32 [192.168.33.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜĞÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54771'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492202732.1473
+    'REQUEST_TIME' => 1492202732
+]
+2017-04-14 20:50:46 [192.168.33.1][-][-][error][ReflectionException] ReflectionException: Class api\modules\v1\Module does not exist in /var/www/postlet/api/vendor/yiisoft/yii2/di/Container.php:424
+Stack trace:
+#0 /var/www/postlet/api/vendor/yiisoft/yii2/di/Container.php(424): ReflectionClass->__construct('api\\modules\\v1\\...')
+#1 /var/www/postlet/api/vendor/yiisoft/yii2/di/Container.php(364): yii\di\Container->getDependencies('api\\modules\\v1\\...')
+#2 /var/www/postlet/api/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('api\\modules\\v1\\...', Array, Array)
+#3 /var/www/postlet/api/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('api\\modules\\v1\\...', Array, Array)
+#4 /var/www/postlet/api/vendor/yiisoft/yii2/base/Module.php(423): yii\BaseYii::createObject(Array, Array)
+#5 /var/www/postlet/api/vendor/yiisoft/yii2/base/Module.php(581): yii\base\Module->getModule('v1')
+#6 /var/www/postlet/api/vendor/yiisoft/yii2/base/Module.php(517): yii\base\Module->createController('')
+#7 /var/www/postlet/api/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1', Array)
+#8 /var/www/postlet/api/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/postlet/api/public/index.php(12): yii\base\Application->run()
+#10 {main}
+2017-04-14 20:50:46 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2017-04-14 20:50:46 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2017-04-14 20:50:46 [192.168.33.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜĞÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54839'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492203046.5077
+    'REQUEST_TIME' => 1492203046
+]
+2017-04-14 20:51:09 [192.168.33.1][-][-][error][ReflectionException] ReflectionException: Class api\modules\v1\Module does not exist in /var/www/postlet/api/vendor/yiisoft/yii2/di/Container.php:424
+Stack trace:
+#0 /var/www/postlet/api/vendor/yiisoft/yii2/di/Container.php(424): ReflectionClass->__construct('api\\modules\\v1\\...')
+#1 /var/www/postlet/api/vendor/yiisoft/yii2/di/Container.php(364): yii\di\Container->getDependencies('api\\modules\\v1\\...')
+#2 /var/www/postlet/api/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('api\\modules\\v1\\...', Array, Array)
+#3 /var/www/postlet/api/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('api\\modules\\v1\\...', Array, Array)
+#4 /var/www/postlet/api/vendor/yiisoft/yii2/base/Module.php(423): yii\BaseYii::createObject(Array, Array)
+#5 /var/www/postlet/api/vendor/yiisoft/yii2/base/Module.php(581): yii\base\Module->getModule('v1')
+#6 /var/www/postlet/api/vendor/yiisoft/yii2/base/Module.php(517): yii\base\Module->createController('')
+#7 /var/www/postlet/api/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1', Array)
+#8 /var/www/postlet/api/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/postlet/api/public/index.php(12): yii\base\Application->run()
+#10 {main}
+2017-04-14 20:51:09 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2017-04-14 20:51:09 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2017-04-14 20:51:09 [192.168.33.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜĞÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54839'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492203069.107
+    'REQUEST_TIME' => 1492203069
+]
+2017-04-14 20:51:23 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /var/www/postlet/api/views/layouts/main.php:76
+    in /var/www/postlet/api/controllers/SiteController.php:64
+2017-04-14 20:51:23 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2017-04-14 20:51:23 [192.168.33.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜĞÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54839'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492203083.1482
+    'REQUEST_TIME' => 1492203083
+]
+2017-04-14 20:52:41 [192.168.33.1][-][-][error][ReflectionException] ReflectionException: Class api\modules\v1\Module does not exist in /var/www/postlet/api/vendor/yiisoft/yii2/di/Container.php:424
+Stack trace:
+#0 /var/www/postlet/api/vendor/yiisoft/yii2/di/Container.php(424): ReflectionClass->__construct('api\\modules\\v1\\...')
+#1 /var/www/postlet/api/vendor/yiisoft/yii2/di/Container.php(364): yii\di\Container->getDependencies('api\\modules\\v1\\...')
+#2 /var/www/postlet/api/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('api\\modules\\v1\\...', Array, Array)
+#3 /var/www/postlet/api/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('api\\modules\\v1\\...', Array, Array)
+#4 /var/www/postlet/api/vendor/yiisoft/yii2/base/Module.php(423): yii\BaseYii::createObject(Array, Array)
+#5 /var/www/postlet/api/vendor/yiisoft/yii2/base/Module.php(581): yii\base\Module->getModule('v1')
+#6 /var/www/postlet/api/vendor/yiisoft/yii2/base/Module.php(517): yii\base\Module->createController('')
+#7 /var/www/postlet/api/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1', Array)
+#8 /var/www/postlet/api/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/postlet/api/public/index.php(12): yii\base\Application->run()
+#10 {main}
+2017-04-14 20:52:41 [192.168.33.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜĞÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54881'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492203161.0792
+    'REQUEST_TIME' => 1492203161
+]
+2017-04-14 20:53:58 [192.168.33.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "v1". in /var/www/postlet/api/vendor/yiisoft/yii2/base/Module.php:532
+Stack trace:
+#0 /var/www/postlet/api/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1', Array)
+#1 /var/www/postlet/api/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/postlet/api/public/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /var/www/postlet/api/vendor/yiisoft/yii2/web/Application.php:114
+Stack trace:
+#0 /var/www/postlet/api/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/postlet/api/public/index.php(12): yii\base\Application->run()
+#2 {main}
+2017-04-14 20:53:59 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /var/www/postlet/api/views/layouts/main.php:76
+2017-04-14 20:53:59 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2017-04-14 20:53:58 [192.168.33.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜĞÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54888'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492203238.8579
+    'REQUEST_TIME' => 1492203238
+]
+2017-04-14 20:54:10 [192.168.33.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "v1/user". in /var/www/postlet/api/vendor/yiisoft/yii2/base/Module.php:532
+Stack trace:
+#0 /var/www/postlet/api/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1/user', Array)
+#1 /var/www/postlet/api/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/postlet/api/public/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /var/www/postlet/api/vendor/yiisoft/yii2/web/Application.php:114
+Stack trace:
+#0 /var/www/postlet/api/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/postlet/api/public/index.php(12): yii\base\Application->run()
+#2 {main}
+2017-04-14 20:54:10 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /var/www/postlet/api/views/layouts/main.php:76
+2017-04-14 20:54:10 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2017-04-14 20:54:10 [192.168.33.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜĞÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54889'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/user'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492203250.1685
+    'REQUEST_TIME' => 1492203250
+]
+2017-04-14 20:55:20 [192.168.33.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "v1/user". in /var/www/postlet/api/vendor/yiisoft/yii2/base/Module.php:532
+Stack trace:
+#0 /var/www/postlet/api/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1/user', Array)
+#1 /var/www/postlet/api/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/postlet/api/public/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /var/www/postlet/api/vendor/yiisoft/yii2/web/Application.php:114
+Stack trace:
+#0 /var/www/postlet/api/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/postlet/api/public/index.php(12): yii\base\Application->run()
+#2 {main}
+2017-04-14 20:55:20 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /var/www/postlet/api/views/layouts/main.php:76
+2017-04-14 20:55:20 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2017-04-14 20:55:20 [192.168.33.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜĞÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54914'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/user'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492203320.4799
+    'REQUEST_TIME' => 1492203320
+]
+2017-04-14 20:55:39 [192.168.33.1][-][-][error][yii\base\ErrorException:1] yii\base\ErrorException: Class 'app\modules\v1\controllers\Controller' not found in /var/www/postlet/api/modules/v1/controllers/UserController.php:5
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-04-14 20:55:39 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2017-04-14 20:55:39 [192.168.33.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜĞÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54914'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/user'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492203339.3011
+    'REQUEST_TIME' => 1492203339
+]
