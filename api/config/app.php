@@ -44,7 +44,11 @@ $config = [
       'enablePrettyUrl' => true,
       'showScriptName' => false,
       'rules' => [
-        '<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>'
+        [
+          'class' => 'yii\rest\UrlRule',
+          'controller' => 'v1/post',
+          'pluralize' => false,
+        ],
       ],
     ],
   ],

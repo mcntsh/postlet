@@ -5,6 +5,7 @@ use Yii;
 use yii\web\Controller as YiiController;
 use yii\web\Response as YiiResponse;
 
+use api\modules\v1\enums\HttpEnum;
 use api\modules\v1\filters\ResponseFilter;
 
 class ApiController extends YiiController
@@ -32,6 +33,11 @@ class ApiController extends YiiController
     return $this->_errors;
   }
 
+  public function addModelErrors($errors)
+  {
+    return $this->_errors[$key] = array_push($this->_errors[$key], $errors);
+  }
+
   public function addError($key, $code, $message = '')
   {
     $this->_errors[$key] = [
@@ -45,7 +51,13 @@ class ApiController extends YiiController
     return $this->_errors;
   }
 
-  public function setResponseError($code = 500)
+  public function returnAndRespond($code = HttpEnum::ServerError, $message = '')
+  {
+    $this->setResponseCode($code);
+    return $message;
+  }
+
+  public function setResponseCode($code = HttpEnum::ServerError)
   {
     Yii::$app->response->setStatusCode($code);
   }
