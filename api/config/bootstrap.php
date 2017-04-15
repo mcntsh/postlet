@@ -8,3 +8,4 @@ $COMMON_DB_CONFIG = require($COMMON_DIR . '/config/db.php');
 $COMMON_PARAMS_CONFIG = require($COMMON_DIR . '/config/params.php');
 
 Yii::setAlias('@api', $PROJECT_ROOT . '/api');
+Yii::setAlias('@common', $PROJECT_ROOT . '/common');

@@ -1,11 +1,11 @@
 <?php
-namespace app\modules\v1\components;
+namespace api\modules\v1\components;
 
 use Yii;
 use yii\web\Controller as YiiController;
 use yii\web\Response as YiiResponse;
 
-use app\modules\v1\filters\ResponseFilter;
+use api\modules\v1\filters\ResponseFilter;
 
 class ApiController extends YiiController
 {

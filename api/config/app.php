@@ -9,7 +9,7 @@ $config = [
   'modules' => [
     'v1' => [
       'basePath' => '@api/modules/v1',
-      'class' => 'app\modules\v1\Module'
+      'class' => 'api\modules\v1\Module'
     ]
   ],
   'components' => [
