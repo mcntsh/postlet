@@ -1,16 +1,20 @@
 <?php
 namespace app\modules\v1\controllers;
 
-use yii\web\Controller;
+use Yii;
 
-class UserController extends Controller
+use app\modules\v1\components\ApiController as ApiController;
+use app\modules\v1\enums\ErrorEnum;
+
+use common\models\Post;
+
+class UserController extends ApiController
 {
+
   public function actionIndex()
   {
-    echo 'Debugging: "d"';
-    echo '<pre>';
-    print_r("d");
-    echo '</pre>';
-    exit;
+    $this->addError('token', ErrorEnum::Invalid, 'The auth token is invalid');
+    $this->setResponseError(403);
   }
+
 }
