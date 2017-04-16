@@ -6,12 +6,13 @@ use Yii;
 
 use yii\behaviors\TimestampBehavior;
 use yii\filters\auth\HttpBearerAuth;
+use yii\filters\RateLimitInterface;
 
 use common\models\BaseModel;
 
 use yii\web\IdentityInterface;
 
-class Account extends BaseModel implements IdentityInterface
+class Account extends BaseModel implements RateLimitInterface, IdentityInterface
 {
 
   public static function tableName()
@@ -79,6 +80,25 @@ class Account extends BaseModel implements IdentityInterface
   public function removePasswordResetToken()
   {
     $this->password_reset_token = null;
+  }
+
+  // Rate limiting
+
+  public function getRateLimit($request, $action)
+  {
+    return [1, 5]; // One request every 5 seconds
+  }
+
+  public function loadAllowance($request, $action)
+  {
+    return [$this->rate_limit_allowance, $this->rate_limit_allowance_updated];
+  }
+
+  public function saveAllowance($request, $action, $allowance, $timestamp)
+  {
+    $this->rate_limit_allowance = $allowance;
+    $this->rate_limit_allowance_updated = $timestamp;
+    $this->save();
   }
 
   // Auth Key

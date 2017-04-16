@@ -14,6 +14,7 @@ use common\models\Post;
 use yii\filters\auth\CompositeAuth;
 use yii\filters\auth\HttpBearerAuth;
 use yii\filters\auth\QueryParamAuth;
+use yii\filters\RateLimiter;
 
 use api\modules\v1\filters\auth\PostBodyAuth;
 
@@ -24,7 +25,7 @@ class PostController extends ApiController
   {
     $behaviors = parent::behaviors();
 
-    $behaviors[] = [
+    $behaviors['tokenAuth'] = [
       'class' => CompositeAuth::className(),
       'authMethods' => [
         ['class' => HttpBearerAuth::className()],
@@ -37,7 +38,11 @@ class PostController extends ApiController
           'tokenParam' => 'auth-key'
         ],
       ]
-      // 'except' => ['view']
+    ];
+
+    $behaviors['rateLimit'] = [
+      'class' => RateLimiter::className(),
+      'only' => ['create']
     ];
 
     return $behaviors;

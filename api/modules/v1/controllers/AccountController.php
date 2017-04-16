@@ -19,7 +19,7 @@ class AccountController extends ApiController
   {
     $this->setResponseCode(HttpEnum::Created);
 
-    $payload = Yii::$app->request->post();
+    $payload = (object) Yii::$app->request->post();
 
     if(Account::findByEmail($payload->email)) {
       $this->addError('email', ErrorEnum::Exists, 'An account with this email is already registered.');
