@@ -2,36 +2,24 @@
 
 namespace common\models;
 
-use yii\behaviors\TimestampBehavior;
+use common\models\BaseModel;
+use common\behaviors\KeystampBehavior;
 
-use yii\db\Expression;
-use yii\db\ActiveRecord;
-
-class Post extends ActiveRecord
+class Post extends BaseModel
 {
 
   public static function tableName()
   {
-    return '{{%post}}';
+    return '{{%posts}}';
   }
 
   public function behaviors()
   {
-    return [
-      [
-        'class' => TimestampBehavior::className(),
-        'createdAtAttribute' => 'created_at',
-        'updatedAtAttribute' => 'updated_at',
-        'value' => new Expression('NOW()'),
-      ],
-    ];
-  }
+    $behaviors = parent::behaviors();
 
-  public function attributeLabels()
-    {
-      return [
-        'body' => 'Body',
-      ];
-    }
+    $behaviors[] = ['class' => KeystampBehavior::className()];
+
+    return $behaviors;
+  }
 
 }

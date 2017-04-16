@@ -3,15 +3,15 @@ namespace api\modules\v1\controllers;
 
 use Yii;
 
-use api\modules\v1\components\ApiController as ApiController;
+use api\modules\v1\components\ApiController;
 use api\modules\v1\enums\ErrorEnum;
 use api\modules\v1\enums\HttpEnum;
 
 use yii\helpers\Json;
 
-use yii\filters\VerbFilter;
-
 use common\models\Post;
+
+use yii\filters\auth\HttpBearerAuth;
 
 class PostController extends ApiController
 {
@@ -20,33 +20,29 @@ class PostController extends ApiController
   {
     $behaviors = parent::behaviors();
 
-    // $behaviors['verbFilter'] = [
-    //   'class' => VerbFilter::className(),
-    //   'actions' => [
-    //     'index'  => ['get'],
-    //   ]
-    // ];
+    $behaviors['authenticator'] = [
+      'class' => HttpBearerAuth::className(),
+      'except' => ['view']
+    ];
 
     return $behaviors;
   }
 
-  public function actionIndex() {
-    // ...
-  }
-
   // POST
   public function actionCreate() {
-    $this->setResponseCode(HttpEnum::Ok);
+    $this->setResponseCode(HttpEnum::Created);
 
-    try {
-      $postPayload = Json::encode(Yii::$app->request->post());
-    } catch(InvalidParamException $e) {
-      $this->addError('body', ErrorEnum::Malformed);
+    $headers = Yii::$app->request->getHeaders();
+    $payload = Yii::$app->request->post();
+
+    if(!$payload) {
+      $this->addError('body', empty($rawPayload) ? ErrorEnum::Missing : ErrorEnum::Malformed);
       return $this->returnAndRespond(HttpEnum::BadRequest);
     }
 
     $post = new Post();
-    $post->body = $postPayload;
+    $post->body = Json::encode($payload);
+    $post->request_origin = $headers->get('origin');
 
     if(!$post->save()) {
       $this->addModelErrors($post->getErrors());
@@ -56,8 +52,9 @@ class PostController extends ApiController
     return $post;
   }
 
-  public function actionView($id) {
-    $this->setResponseCode(HttpEnum::Found);
+  public function actionView($id)
+  {
+    $this->setResponseCode(HttpEnum::Ok);
 
     if(!$post = Post::findOne($id)) {
       return $this->returnAndRespond(HttpEnum::NotFound);
@@ -66,12 +63,8 @@ class PostController extends ApiController
     return $post;
   }
 
-  public function actionUpdate() {
-    $this->setResponseCode(HttpEnum::Ok);
-
-  }
-
-  public function actionDelete() {
+  public function actionDelete()
+  {
     $this->setResponseCode(HttpEnum::Ok);
 
     if(!$post = Post::findOne($id)) {
@@ -85,6 +78,5 @@ class PostController extends ApiController
 
     return $post;
   }
-
 
 }

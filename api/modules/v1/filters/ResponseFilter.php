@@ -9,6 +9,30 @@ class ResponseFilter extends ActionFilter
 
   private $_errors = [];
 
+  public function init()
+  {
+    Yii::$app->response->on(Yii::$app->response::EVENT_BEFORE_SEND, [$this, 'handleExceptions']);
+  }
+
+  public function handleExceptions($event)
+  {
+    $responseData = (object)$event->sender->data;
+    
+    if(!isset($responseData->code)) {
+      return;
+    }
+
+    $responseData = [
+      'status' => [
+        'code' => $responseData->status,
+        'message' => $responseData->name,
+      ],
+      'body' => $responseData->message
+    ];
+
+    $event->sender->data = $responseData;
+  }
+
   public function beforeAction($action)
   {
     Yii::$app->response->format = Yii::$app->response::FORMAT_JSON;

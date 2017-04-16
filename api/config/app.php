@@ -14,17 +14,24 @@ $config = [
   ],
   'components' => [
     'request' => [
-      'cookieValidationKey' => 'kwFp95nFdfK7VmYNBmvnSACc3WGmbjPV',
+      'parsers' => [
+        'application/json' => 'yii\web\JsonParser',
+      ]
+    ],
+    'response' => [
+      'formatters' => [
+        \yii\web\Response::FORMAT_JSON => [
+          'class' => 'yii\web\JsonResponseFormatter',
+        ],
+      ],
     ],
     'cache' => [
       'class' => 'yii\caching\FileCache',
     ],
     'user' => [
-      'identityClass' => 'app\models\User',
-      'enableAutoLogin' => true,
-    ],
-    'errorHandler' => [
-      'errorAction' => 'site/error',
+      'identityClass' => 'common\models\Account',
+      'enableSession' => false,
+      'loginUrl' => null,
     ],
     'mailer' => [
       'class' => 'yii\swiftmailer\Mailer',
@@ -46,7 +53,9 @@ $config = [
       'rules' => [
         [
           'class' => 'yii\rest\UrlRule',
-          'controller' => 'v1/post',
+          'controller' => [
+            'v1/post', 'v1/account'
+          ],
           'pluralize' => false,
         ],
       ],

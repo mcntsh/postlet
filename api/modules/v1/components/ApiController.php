@@ -6,10 +6,14 @@ use yii\web\Controller as YiiController;
 use yii\web\Response as YiiResponse;
 
 use api\modules\v1\enums\HttpEnum;
+
+use api\modules\v1\filters\RequestFilter;
 use api\modules\v1\filters\ResponseFilter;
 
 class ApiController extends YiiController
 {
+
+  public $enableCsrfValidation = false;
 
   private $_errors = [];
   protected static $errorStatuses = [
@@ -20,10 +24,8 @@ class ApiController extends YiiController
   {
     $behaviors = parent::behaviors();
 
-    $behaviors['responseFilter'] = [
-      'class' => ResponseFilter::className(),
-      // 'only' => ['create', 'update'],
-    ];
+    $behaviors['requestFilter'] = [ 'class' => RequestFilter::className()];
+    $behaviors['responseFilter'] = [ 'class' => ResponseFilter::className()];
 
     return $behaviors;
   }
