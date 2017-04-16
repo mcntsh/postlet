@@ -11,7 +11,11 @@ use yii\helpers\Json;
 
 use common\models\Post;
 
+use yii\filters\auth\CompositeAuth;
 use yii\filters\auth\HttpBearerAuth;
+use yii\filters\auth\QueryParamAuth;
+
+use api\modules\v1\filters\auth\PostBodyAuth;
 
 class PostController extends ApiController
 {
@@ -20,9 +24,20 @@ class PostController extends ApiController
   {
     $behaviors = parent::behaviors();
 
-    $behaviors['authenticator'] = [
-      'class' => HttpBearerAuth::className(),
-      'except' => ['view']
+    $behaviors[] = [
+      'class' => CompositeAuth::className(),
+      'authMethods' => [
+        ['class' => HttpBearerAuth::className()],
+        [
+          'class' => PostBodyAuth::className(),
+          'tokenParam' => 'auth-key'
+        ],
+        [
+          'class' => QueryParamAuth::className(),
+          'tokenParam' => 'auth-key'
+        ],
+      ]
+      // 'except' => ['view']
     ];
 
     return $behaviors;
@@ -33,7 +48,7 @@ class PostController extends ApiController
     $this->setResponseCode(HttpEnum::Created);
 
     $headers = Yii::$app->request->getHeaders();
-    $payload = Yii::$app->request->post();
+    $payload = (object) Yii::$app->request->post();
 
     if(!$payload) {
       $this->addError('body', empty($rawPayload) ? ErrorEnum::Missing : ErrorEnum::Malformed);

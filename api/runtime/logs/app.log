@@ -16715,3 +16715,1521 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1492317395.9635
     'REQUEST_TIME' => 1492317395
 ]
+2017-04-16 04:49:50 [192.168.33.1][-][-][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'jon@mcntsh.com' for key 'email' in /var/www/postlet/vendor/yiisoft/yii2/db/Command.php:846
+Stack trace:
+#0 /var/www/postlet/vendor/yiisoft/yii2/db/Command.php(846): PDOStatement->execute()
+#1 /var/www/postlet/vendor/yiisoft/yii2/db/Schema.php(454): yii\db\Command->execute()
+#2 /var/www/postlet/vendor/yiisoft/yii2/db/ActiveRecord.php(494): yii\db\Schema->insert('{{%accounts}}', Array)
+#3 /var/www/postlet/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#4 /var/www/postlet/vendor/yiisoft/yii2/db/BaseActiveRecord.php(634): yii\db\ActiveRecord->insert(true, NULL)
+#5 /var/www/postlet/api/modules/v1/controllers/AccountController.php(29): yii\db\BaseActiveRecord->save()
+#6 [internal function]: api\modules\v1\controllers\AccountController->actionCreate()
+#7 /var/www/postlet/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#10 /var/www/postlet/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1/account/crea...', Array)
+#11 /var/www/postlet/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/postlet/api/public/index.php(13): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'jon@mcntsh.com' for key 'email'
+The SQL being executed was: INSERT INTO `local_accounts` (`email`, `password_hash`, `auth_key`, `created_at`, `updated_at`, `uuid`) VALUES ('jon@mcntsh.com', '$2y$13$8w.tJQQwYE31ZvJp4ftB3.YuK.Xeu00kob6DTioAsKEAyZzXlm2LO', '574c37aa4afc493c0088ab252e93941c', NOW(), NOW(), '54a534d253666d304d5e7a7858b744a9') in /var/www/postlet/vendor/yiisoft/yii2/db/Schema.php:636
+Stack trace:
+#0 /var/www/postlet/vendor/yiisoft/yii2/db/Command.php(856): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `lo...')
+#1 /var/www/postlet/vendor/yiisoft/yii2/db/Schema.php(454): yii\db\Command->execute()
+#2 /var/www/postlet/vendor/yiisoft/yii2/db/ActiveRecord.php(494): yii\db\Schema->insert('{{%accounts}}', Array)
+#3 /var/www/postlet/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#4 /var/www/postlet/vendor/yiisoft/yii2/db/BaseActiveRecord.php(634): yii\db\ActiveRecord->insert(true, NULL)
+#5 /var/www/postlet/api/modules/v1/controllers/AccountController.php(29): yii\db\BaseActiveRecord->save()
+#6 [internal function]: api\modules\v1\controllers\AccountController->actionCreate()
+#7 /var/www/postlet/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#10 /var/www/postlet/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1/account/crea...', Array)
+#11 /var/www/postlet/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/postlet/api/public/index.php(13): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1062
+    [2] => Duplicate entry 'jon@mcntsh.com' for key 'email'
+)
+
+2017-04-16 04:49:49 [192.168.33.1][-][-][info][application] $_POST = [
+    'email' => 'jon@mcntsh.com'
+    'password' => 'omglol1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a18925ab4752e943a04740c9a8e42320784213ff4d7102f88ac1068c2a2268b9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"l“\'©]§3~t:{\'•ÌØš¦æDaÿŽ½5¬eEÉi\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=a18925ab4752e943a04740c9a8e42320784213ff4d7102f88ac1068c2a2268b9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%07l%93%27%A9%5D%A73%7Et%3A%12%7B%27%95%CC%D8%9A%A6%E6Da%FF%8E%BD5%ACeE%C9i%1B%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_ORIGIN' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '9217f399-953a-a2a5-f859-d07db61589cf'
+    'HTTP_CONTENT_LENGTH' => '39'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '53320'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/account'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => '39'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492318189.5703
+    'REQUEST_TIME' => 1492318189
+]
+2017-04-16 04:50:11 [192.168.33.1][-][-][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'jon@mcntsh.com' for key 'email' in /var/www/postlet/vendor/yiisoft/yii2/db/Command.php:846
+Stack trace:
+#0 /var/www/postlet/vendor/yiisoft/yii2/db/Command.php(846): PDOStatement->execute()
+#1 /var/www/postlet/vendor/yiisoft/yii2/db/Schema.php(454): yii\db\Command->execute()
+#2 /var/www/postlet/vendor/yiisoft/yii2/db/ActiveRecord.php(494): yii\db\Schema->insert('{{%accounts}}', Array)
+#3 /var/www/postlet/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#4 /var/www/postlet/vendor/yiisoft/yii2/db/BaseActiveRecord.php(634): yii\db\ActiveRecord->insert(true, NULL)
+#5 /var/www/postlet/api/modules/v1/controllers/AccountController.php(29): yii\db\BaseActiveRecord->save()
+#6 [internal function]: api\modules\v1\controllers\AccountController->actionCreate()
+#7 /var/www/postlet/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#10 /var/www/postlet/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1/account/crea...', Array)
+#11 /var/www/postlet/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/postlet/api/public/index.php(13): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'jon@mcntsh.com' for key 'email'
+The SQL being executed was: INSERT INTO `local_accounts` (`email`, `password_hash`, `auth_key`, `created_at`, `updated_at`, `uuid`) VALUES ('jon@mcntsh.com', '$2y$13$/w.NjFgI8NJoj/zncjiyyu8OIYru4mjMWuV/PaHbqI.bLl4uI5TY.', 'c074b1569d0923790f64d345d61fbd40', NOW(), NOW(), '0fd8fd709a267dcf255bb512ad654bdb') in /var/www/postlet/vendor/yiisoft/yii2/db/Schema.php:636
+Stack trace:
+#0 /var/www/postlet/vendor/yiisoft/yii2/db/Command.php(856): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `lo...')
+#1 /var/www/postlet/vendor/yiisoft/yii2/db/Schema.php(454): yii\db\Command->execute()
+#2 /var/www/postlet/vendor/yiisoft/yii2/db/ActiveRecord.php(494): yii\db\Schema->insert('{{%accounts}}', Array)
+#3 /var/www/postlet/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#4 /var/www/postlet/vendor/yiisoft/yii2/db/BaseActiveRecord.php(634): yii\db\ActiveRecord->insert(true, NULL)
+#5 /var/www/postlet/api/modules/v1/controllers/AccountController.php(29): yii\db\BaseActiveRecord->save()
+#6 [internal function]: api\modules\v1\controllers\AccountController->actionCreate()
+#7 /var/www/postlet/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#10 /var/www/postlet/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1/account/crea...', Array)
+#11 /var/www/postlet/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/postlet/api/public/index.php(13): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1062
+    [2] => Duplicate entry 'jon@mcntsh.com' for key 'email'
+)
+
+2017-04-16 04:50:10 [192.168.33.1][-][-][info][application] $_POST = [
+    'email' => 'jon@mcntsh.com'
+    'password' => 'omglol1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a18925ab4752e943a04740c9a8e42320784213ff4d7102f88ac1068c2a2268b9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"l“\'©]§3~t:{\'•ÌØš¦æDaÿŽ½5¬eEÉi\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=a18925ab4752e943a04740c9a8e42320784213ff4d7102f88ac1068c2a2268b9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%07l%93%27%A9%5D%A73%7Et%3A%12%7B%27%95%CC%D8%9A%A6%E6Da%FF%8E%BD5%ACeE%C9i%1B%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_ORIGIN' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '48659851-7a3f-b7e1-906b-ee4d00b6f9a1'
+    'HTTP_CONTENT_LENGTH' => '39'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '53320'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/account'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => '39'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492318210.2883
+    'REQUEST_TIME' => 1492318210
+]
+2017-04-16 18:11:52 [192.168.33.1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause' in /var/www/postlet/vendor/yiisoft/yii2/db/Command.php:902
+Stack trace:
+#0 /var/www/postlet/vendor/yiisoft/yii2/db/Command.php(902): PDOStatement->execute()
+#1 /var/www/postlet/vendor/yiisoft/yii2/db/Command.php(376): yii\db\Command->queryInternal('fetch', NULL)
+#2 /var/www/postlet/vendor/yiisoft/yii2/db/Query.php(253): yii\db\Command->queryOne()
+#3 /var/www/postlet/vendor/yiisoft/yii2/db/ActiveQuery.php(295): yii\db\Query->one(NULL)
+#4 /var/www/postlet/vendor/yiisoft/yii2/db/BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#5 /var/www/postlet/common/models/Account.php(39): yii\db\BaseActiveRecord::findOne(Array)
+#6 /var/www/postlet/api/modules/v1/controllers/AccountController.php(24): common\models\Account::findByEmail('jon@mcntsh.com')
+#7 [internal function]: api\modules\v1\controllers\AccountController->actionCreate()
+#8 /var/www/postlet/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#11 /var/www/postlet/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1/account/crea...', Array)
+#12 /var/www/postlet/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/postlet/api/public/index.php(13): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'
+The SQL being executed was: SELECT * FROM `local_accounts` WHERE `username`='jon@mcntsh.com' in /var/www/postlet/vendor/yiisoft/yii2/db/Schema.php:636
+Stack trace:
+#0 /var/www/postlet/vendor/yiisoft/yii2/db/Command.php(917): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 /var/www/postlet/vendor/yiisoft/yii2/db/Command.php(376): yii\db\Command->queryInternal('fetch', NULL)
+#2 /var/www/postlet/vendor/yiisoft/yii2/db/Query.php(253): yii\db\Command->queryOne()
+#3 /var/www/postlet/vendor/yiisoft/yii2/db/ActiveQuery.php(295): yii\db\Query->one(NULL)
+#4 /var/www/postlet/vendor/yiisoft/yii2/db/BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#5 /var/www/postlet/common/models/Account.php(39): yii\db\BaseActiveRecord::findOne(Array)
+#6 /var/www/postlet/api/modules/v1/controllers/AccountController.php(24): common\models\Account::findByEmail('jon@mcntsh.com')
+#7 [internal function]: api\modules\v1\controllers\AccountController->actionCreate()
+#8 /var/www/postlet/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#11 /var/www/postlet/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1/account/crea...', Array)
+#12 /var/www/postlet/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/postlet/api/public/index.php(13): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'username' in 'where clause'
+)
+
+2017-04-16 18:11:52 [192.168.33.1][-][-][info][application] $_POST = [
+    'email' => 'jon@mcntsh.com'
+    'password' => 'omglol1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a18925ab4752e943a04740c9a8e42320784213ff4d7102f88ac1068c2a2268b9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"l“\'©]§3~t:{\'•ÌØš¦æDaÿŽ½5¬eEÉi\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=a18925ab4752e943a04740c9a8e42320784213ff4d7102f88ac1068c2a2268b9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%07l%93%27%A9%5D%A73%7Et%3A%12%7B%27%95%CC%D8%9A%A6%E6Da%FF%8E%BD5%ACeE%C9i%1B%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_ORIGIN' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '07fe7d80-dea7-ab72-4d65-383ae2d5bfa6'
+    'HTTP_CONTENT_LENGTH' => '39'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54426'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/account'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => '39'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492366312.5872
+    'REQUEST_TIME' => 1492366312
+]
+2017-04-16 18:12:06 [192.168.33.1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause' in /var/www/postlet/vendor/yiisoft/yii2/db/Command.php:902
+Stack trace:
+#0 /var/www/postlet/vendor/yiisoft/yii2/db/Command.php(902): PDOStatement->execute()
+#1 /var/www/postlet/vendor/yiisoft/yii2/db/Command.php(376): yii\db\Command->queryInternal('fetch', NULL)
+#2 /var/www/postlet/vendor/yiisoft/yii2/db/Query.php(253): yii\db\Command->queryOne()
+#3 /var/www/postlet/vendor/yiisoft/yii2/db/ActiveQuery.php(295): yii\db\Query->one(NULL)
+#4 /var/www/postlet/vendor/yiisoft/yii2/db/BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#5 /var/www/postlet/common/models/Account.php(39): yii\db\BaseActiveRecord::findOne(Array)
+#6 /var/www/postlet/api/modules/v1/controllers/AccountController.php(24): common\models\Account::findByEmail('jon@mcntsh.com')
+#7 [internal function]: api\modules\v1\controllers\AccountController->actionCreate()
+#8 /var/www/postlet/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#11 /var/www/postlet/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1/account/crea...', Array)
+#12 /var/www/postlet/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/postlet/api/public/index.php(13): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'
+The SQL being executed was: SELECT * FROM `local_accounts` WHERE `username`='jon@mcntsh.com' in /var/www/postlet/vendor/yiisoft/yii2/db/Schema.php:636
+Stack trace:
+#0 /var/www/postlet/vendor/yiisoft/yii2/db/Command.php(917): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 /var/www/postlet/vendor/yiisoft/yii2/db/Command.php(376): yii\db\Command->queryInternal('fetch', NULL)
+#2 /var/www/postlet/vendor/yiisoft/yii2/db/Query.php(253): yii\db\Command->queryOne()
+#3 /var/www/postlet/vendor/yiisoft/yii2/db/ActiveQuery.php(295): yii\db\Query->one(NULL)
+#4 /var/www/postlet/vendor/yiisoft/yii2/db/BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#5 /var/www/postlet/common/models/Account.php(39): yii\db\BaseActiveRecord::findOne(Array)
+#6 /var/www/postlet/api/modules/v1/controllers/AccountController.php(24): common\models\Account::findByEmail('jon@mcntsh.com')
+#7 [internal function]: api\modules\v1\controllers\AccountController->actionCreate()
+#8 /var/www/postlet/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#11 /var/www/postlet/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1/account/crea...', Array)
+#12 /var/www/postlet/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/postlet/api/public/index.php(13): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'username' in 'where clause'
+)
+
+2017-04-16 18:12:06 [192.168.33.1][-][-][info][application] $_POST = [
+    'email' => 'jon@mcntsh.com'
+    'password' => 'omglol1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a18925ab4752e943a04740c9a8e42320784213ff4d7102f88ac1068c2a2268b9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"l“\'©]§3~t:{\'•ÌØš¦æDaÿŽ½5¬eEÉi\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=a18925ab4752e943a04740c9a8e42320784213ff4d7102f88ac1068c2a2268b9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%07l%93%27%A9%5D%A73%7Et%3A%12%7B%27%95%CC%D8%9A%A6%E6Da%FF%8E%BD5%ACeE%C9i%1B%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_ORIGIN' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '2190f253-d99b-fea1-a667-bf4f317eeed7'
+    'HTTP_CONTENT_LENGTH' => '39'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54426'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/account'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => '39'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492366326.1381
+    'REQUEST_TIME' => 1492366326
+]
+2017-04-16 18:12:26 [192.168.33.1][-][-][error][Error] Error: Undefined class constant 'Exists' in /var/www/postlet/api/modules/v1/controllers/AccountController.php:25
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\AccountController->actionCreate()
+#1 /var/www/postlet/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#4 /var/www/postlet/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1/account/crea...', Array)
+#5 /var/www/postlet/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /var/www/postlet/api/public/index.php(13): yii\base\Application->run()
+#7 {main}
+2017-04-16 18:12:26 [192.168.33.1][-][-][info][application] $_POST = [
+    'email' => 'jon@mcntsh.com'
+    'password' => 'omglol1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a18925ab4752e943a04740c9a8e42320784213ff4d7102f88ac1068c2a2268b9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"l“\'©]§3~t:{\'•ÌØš¦æDaÿŽ½5¬eEÉi\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=a18925ab4752e943a04740c9a8e42320784213ff4d7102f88ac1068c2a2268b9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%07l%93%27%A9%5D%A73%7Et%3A%12%7B%27%95%CC%D8%9A%A6%E6Da%FF%8E%BD5%ACeE%C9i%1B%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_ORIGIN' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'e78532f0-b77b-fc14-e74b-ad012b72ce3f'
+    'HTTP_CONTENT_LENGTH' => '39'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54426'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/account'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => '39'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492366346.0966
+    'REQUEST_TIME' => 1492366346
+]
+2017-04-16 18:20:12 [192.168.33.1][-][-][error][ParseError] ParseError: syntax error, unexpected 'return' (T_RETURN) in /var/www/postlet/api/modules/v1/controllers/PostController.php:33
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('api\\modules\\v1\\...')
+#1 [internal function]: spl_autoload_call('api\\modules\\v1\\...')
+#2 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(633): class_exists('api\\modules\\v1\\...')
+#3 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(591): yii\base\Module->createControllerByID('post')
+#4 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(583): yii\base\Module->createController('view')
+#5 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(517): yii\base\Module->createController('post/view')
+#6 /var/www/postlet/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1/post/view', Array)
+#7 /var/www/postlet/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /var/www/postlet/api/public/index.php(13): yii\base\Application->run()
+#9 {main}
+2017-04-16 18:20:12 [192.168.33.1][-][-][info][application] $_GET = [
+    'id' => '13'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a18925ab4752e943a04740c9a8e42320784213ff4d7102f88ac1068c2a2268b9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"l“\'©]§3~t:{\'•ÌØš¦æDaÿŽ½5¬eEÉi\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=a18925ab4752e943a04740c9a8e42320784213ff4d7102f88ac1068c2a2268b9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%07l%93%27%A9%5D%A73%7Et%3A%12%7B%27%95%CC%D8%9A%A6%E6Da%FF%8E%BD5%ACeE%C9i%1B%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '64ba9ca8-bffb-a2a0-a461-658fdbe72207'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54520'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/post/13'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => 'application/json'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492366812.6354
+    'REQUEST_TIME' => 1492366812
+]
+2017-04-16 18:20:20 [192.168.33.1][-][-][error][ParseError] ParseError: syntax error, unexpected 'return' (T_RETURN) in /var/www/postlet/api/modules/v1/controllers/PostController.php:33
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('api\\modules\\v1\\...')
+#1 [internal function]: spl_autoload_call('api\\modules\\v1\\...')
+#2 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(633): class_exists('api\\modules\\v1\\...')
+#3 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(591): yii\base\Module->createControllerByID('post')
+#4 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(583): yii\base\Module->createController('view')
+#5 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(517): yii\base\Module->createController('post/view')
+#6 /var/www/postlet/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1/post/view', Array)
+#7 /var/www/postlet/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /var/www/postlet/api/public/index.php(13): yii\base\Application->run()
+#9 {main}
+2017-04-16 18:20:19 [192.168.33.1][-][-][info][application] $_GET = [
+    'id' => '13'
+]
+
+$_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜÐÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54521'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/post/13'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492366819.9794
+    'REQUEST_TIME' => 1492366819
+]
+2017-04-16 18:20:33 [192.168.33.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in /var/www/postlet/vendor/yiisoft/yii2/filters/auth/AuthMethod.php:91
+Stack trace:
+#0 /var/www/postlet/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(74): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 /var/www/postlet/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /var/www/postlet/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /var/www/postlet/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('view', Array)
+#8 /var/www/postlet/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1/post/view', Array)
+#9 /var/www/postlet/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/postlet/api/public/index.php(13): yii\base\Application->run()
+#11 {main}
+2017-04-16 18:20:33 [192.168.33.1][-][-][info][application] $_GET = [
+    'id' => '13'
+]
+
+$_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜÐÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54521'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/post/13'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492366833.422
+    'REQUEST_TIME' => 1492366833
+]
+2017-04-16 18:20:52 [192.168.33.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in /var/www/postlet/vendor/yiisoft/yii2/filters/auth/AuthMethod.php:91
+Stack trace:
+#0 /var/www/postlet/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(74): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 /var/www/postlet/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /var/www/postlet/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /var/www/postlet/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('view', Array)
+#8 /var/www/postlet/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1/post/view', Array)
+#9 /var/www/postlet/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/postlet/api/public/index.php(13): yii\base\Application->run()
+#11 {main}
+2017-04-16 18:20:52 [192.168.33.1][-][-][info][application] $_GET = [
+    'id' => '13'
+    'access-token' => '7d3378a616bcf1ee05088ef3144c2bc4'
+]
+
+$_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜÐÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54521'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/post/13?access-token=7d3378a616bcf1ee05088ef3144c2bc4'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'access-token=7d3378a616bcf1ee05088ef3144c2bc4'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492366852.2925
+    'REQUEST_TIME' => 1492366852
+]
+2017-04-16 18:25:05 [192.168.33.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in /var/www/postlet/vendor/yiisoft/yii2/filters/auth/AuthMethod.php:91
+Stack trace:
+#0 /var/www/postlet/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(74): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 /var/www/postlet/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /var/www/postlet/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /var/www/postlet/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('view', Array)
+#8 /var/www/postlet/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1/post/view', Array)
+#9 /var/www/postlet/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/postlet/api/public/index.php(13): yii\base\Application->run()
+#11 {main}
+2017-04-16 18:25:05 [192.168.33.1][-][-][info][application] $_GET = [
+    'id' => '13'
+    'access-token' => '7d3378a616bcf1ee05088ef3144c2bc4'
+]
+
+$_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜÐÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54565'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/post/13?access-token=7d3378a616bcf1ee05088ef3144c2bc4'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'access-token=7d3378a616bcf1ee05088ef3144c2bc4'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492367105.505
+    'REQUEST_TIME' => 1492367105
+]
+2017-04-16 18:25:09 [192.168.33.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in /var/www/postlet/vendor/yiisoft/yii2/filters/auth/AuthMethod.php:91
+Stack trace:
+#0 /var/www/postlet/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(74): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 /var/www/postlet/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /var/www/postlet/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /var/www/postlet/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('view', Array)
+#8 /var/www/postlet/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1/post/view', Array)
+#9 /var/www/postlet/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/postlet/api/public/index.php(13): yii\base\Application->run()
+#11 {main}
+2017-04-16 18:25:09 [192.168.33.1][-][-][info][application] $_GET = [
+    'id' => '13'
+    'access-token' => '7d3378a616bcf1ee05088ef3144c2bc4'
+]
+
+$_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜÐÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54565'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/post/13?access-token=7d3378a616bcf1ee05088ef3144c2bc4'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'access-token=7d3378a616bcf1ee05088ef3144c2bc4'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492367109.8568
+    'REQUEST_TIME' => 1492367109
+]
+2017-04-16 18:25:19 [192.168.33.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in /var/www/postlet/vendor/yiisoft/yii2/filters/auth/AuthMethod.php:91
+Stack trace:
+#0 /var/www/postlet/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(74): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 /var/www/postlet/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /var/www/postlet/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /var/www/postlet/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('view', Array)
+#8 /var/www/postlet/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1/post/view', Array)
+#9 /var/www/postlet/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/postlet/api/public/index.php(13): yii\base\Application->run()
+#11 {main}
+2017-04-16 18:25:19 [192.168.33.1][-][-][info][application] $_GET = [
+    'id' => '13'
+    'access-token' => '7d3378a616bcf1ee05088ef3144c2bc4'
+]
+
+$_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜÐÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54565'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/post/13?access-token=7d3378a616bcf1ee05088ef3144c2bc4'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'access-token=7d3378a616bcf1ee05088ef3144c2bc4'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492367119.822
+    'REQUEST_TIME' => 1492367119
+]
+2017-04-16 18:27:52 [192.168.33.1][-][-][error][ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']' in /var/www/postlet/api/modules/v1/controllers/PostController.php:31
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('api\\modules\\v1\\...')
+#1 [internal function]: spl_autoload_call('api\\modules\\v1\\...')
+#2 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(633): class_exists('api\\modules\\v1\\...')
+#3 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(591): yii\base\Module->createControllerByID('post')
+#4 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(583): yii\base\Module->createController('view')
+#5 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(517): yii\base\Module->createController('post/view')
+#6 /var/www/postlet/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1/post/view', Array)
+#7 /var/www/postlet/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /var/www/postlet/api/public/index.php(13): yii\base\Application->run()
+#9 {main}
+2017-04-16 18:27:52 [192.168.33.1][-][-][info][application] $_GET = [
+    'id' => '13'
+    'access-token' => '7d3378a616bcf1ee05088ef3144c2bc4'
+]
+
+$_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜÐÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54577'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/post/13?access-token=7d3378a616bcf1ee05088ef3144c2bc4'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'access-token=7d3378a616bcf1ee05088ef3144c2bc4'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492367272.549
+    'REQUEST_TIME' => 1492367272
+]
+2017-04-16 18:28:05 [192.168.33.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in /var/www/postlet/vendor/yiisoft/yii2/filters/auth/AuthMethod.php:91
+Stack trace:
+#0 /var/www/postlet/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(74): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 /var/www/postlet/vendor/yiisoft/yii2/filters/auth/CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 /var/www/postlet/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /var/www/postlet/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /var/www/postlet/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('view', Array)
+#9 /var/www/postlet/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1/post/view', Array)
+#10 /var/www/postlet/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/postlet/api/public/index.php(13): yii\base\Application->run()
+#12 {main}
+2017-04-16 18:28:05 [192.168.33.1][-][-][info][application] $_GET = [
+    'id' => '13'
+    'access-token' => '7d3378a616bcf1ee05088ef3144c2bc4'
+]
+
+$_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜÐÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54577'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/post/13?access-token=7d3378a616bcf1ee05088ef3144c2bc4'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'access-token=7d3378a616bcf1ee05088ef3144c2bc4'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492367285.1455
+    'REQUEST_TIME' => 1492367285
+]
+2017-04-16 18:33:18 [192.168.33.1][-][-][error][ParseError] ParseError: syntax error, unexpected ''tokenParam'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /var/www/postlet/api/modules/v1/controllers/PostController.php:33
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('api\\modules\\v1\\...')
+#1 [internal function]: spl_autoload_call('api\\modules\\v1\\...')
+#2 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(633): class_exists('api\\modules\\v1\\...')
+#3 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(591): yii\base\Module->createControllerByID('post')
+#4 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(583): yii\base\Module->createController('view')
+#5 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(517): yii\base\Module->createController('post/view')
+#6 /var/www/postlet/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1/post/view', Array)
+#7 /var/www/postlet/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /var/www/postlet/api/public/index.php(13): yii\base\Application->run()
+#9 {main}
+2017-04-16 18:33:18 [192.168.33.1][-][-][info][application] $_GET = [
+    'id' => '13'
+    'auth-key' => '7d3378a616bcf1ee05088ef3144c2bc4'
+]
+
+$_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜÐÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54618'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/post/13?auth-key=7d3378a616bcf1ee05088ef3144c2bc4'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'auth-key=7d3378a616bcf1ee05088ef3144c2bc4'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492367598.3744
+    'REQUEST_TIME' => 1492367598
+]
+2017-04-16 18:33:22 [192.168.33.1][-][-][error][ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']' in /var/www/postlet/api/modules/v1/controllers/PostController.php:36
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('api\\modules\\v1\\...')
+#1 [internal function]: spl_autoload_call('api\\modules\\v1\\...')
+#2 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(633): class_exists('api\\modules\\v1\\...')
+#3 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(591): yii\base\Module->createControllerByID('post')
+#4 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(583): yii\base\Module->createController('view')
+#5 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(517): yii\base\Module->createController('post/view')
+#6 /var/www/postlet/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1/post/view', Array)
+#7 /var/www/postlet/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /var/www/postlet/api/public/index.php(13): yii\base\Application->run()
+#9 {main}
+2017-04-16 18:33:22 [192.168.33.1][-][-][info][application] $_GET = [
+    'id' => '13'
+    'auth-key' => '7d3378a616bcf1ee05088ef3144c2bc4'
+]
+
+$_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜÐÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54618'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/post/13?auth-key=7d3378a616bcf1ee05088ef3144c2bc4'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'auth-key=7d3378a616bcf1ee05088ef3144c2bc4'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492367602.8221
+    'REQUEST_TIME' => 1492367602
+]
+2017-04-16 18:33:28 [192.168.33.1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'api\modules\v1\filters\auth\PostBodyAuth' in file: /var/www/postlet/api/modules/v1/filters/auth/PostBodyAuth.php. Namespace missing? in /var/www/postlet/vendor/yiisoft/yii2/BaseYii.php:291
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('api\\modules\\v1\\...')
+#1 /var/www/postlet/api/modules/v1/controllers/PostController.php(32): spl_autoload_call('api\\modules\\v1\\...')
+#2 /var/www/postlet/vendor/yiisoft/yii2/base/Component.php(650): api\modules\v1\controllers\PostController->behaviors()
+#3 /var/www/postlet/vendor/yiisoft/yii2/base/Component.php(533): yii\base\Component->ensureBehaviors()
+#4 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /var/www/postlet/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('view', Array)
+#8 /var/www/postlet/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1/post/view', Array)
+#9 /var/www/postlet/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/postlet/api/public/index.php(13): yii\base\Application->run()
+#11 {main}
+2017-04-16 18:33:27 [192.168.33.1][-][-][info][application] $_GET = [
+    'id' => '13'
+    'auth-key' => '7d3378a616bcf1ee05088ef3144c2bc4'
+]
+
+$_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜÐÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54618'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/post/13?auth-key=7d3378a616bcf1ee05088ef3144c2bc4'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'auth-key=7d3378a616bcf1ee05088ef3144c2bc4'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492367607.9743
+    'REQUEST_TIME' => 1492367607
+]
+2017-04-16 18:33:57 [192.168.33.1][-][-][error][Error] Error: Cannot use object of type stdClass as array in /var/www/postlet/vendor/yiisoft/yii2/web/Request.php:448
+Stack trace:
+#0 /var/www/postlet/vendor/yiisoft/yii2/web/Request.php(464): yii\web\Request->getBodyParam('auth-key', NULL)
+#1 /var/www/postlet/api/modules/v1/filters/auth/PostBodyAuth.php(15): yii\web\Request->post('auth-key')
+#2 /var/www/postlet/vendor/yiisoft/yii2/filters/auth/CompositeAuth.php(73): api\modules\v1\filters\auth\PostBodyAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#3 /var/www/postlet/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(59): yii\filters\auth\CompositeAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#4 /var/www/postlet/vendor/yiisoft/yii2/filters/auth/CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#5 /var/www/postlet/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#6 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#7 /var/www/postlet/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#8 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#9 /var/www/postlet/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#10 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#11 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('view', Array)
+#12 /var/www/postlet/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1/post/view', Array)
+#13 /var/www/postlet/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /var/www/postlet/api/public/index.php(13): yii\base\Application->run()
+#15 {main}
+2017-04-16 18:33:57 [192.168.33.1][-][-][info][application] $_GET = [
+    'id' => '13'
+    'auth-key' => '7d3378a616bcf1ee05088ef3144c2bc4'
+]
+
+$_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜÐÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54618'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/post/13?auth-key=7d3378a616bcf1ee05088ef3144c2bc4'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'auth-key=7d3378a616bcf1ee05088ef3144c2bc4'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492367637.2975
+    'REQUEST_TIME' => 1492367637
+]
+2017-04-16 18:34:38 [192.168.33.1][-][-][error][Error] Error: Cannot use object of type stdClass as array in /var/www/postlet/vendor/yiisoft/yii2/web/Request.php:448
+Stack trace:
+#0 /var/www/postlet/vendor/yiisoft/yii2/web/Request.php(464): yii\web\Request->getBodyParam('auth-key', NULL)
+#1 /var/www/postlet/api/modules/v1/filters/auth/PostBodyAuth.php(15): yii\web\Request->post('auth-key')
+#2 /var/www/postlet/vendor/yiisoft/yii2/filters/auth/CompositeAuth.php(73): api\modules\v1\filters\auth\PostBodyAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#3 /var/www/postlet/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(59): yii\filters\auth\CompositeAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#4 /var/www/postlet/vendor/yiisoft/yii2/filters/auth/CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#5 /var/www/postlet/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#6 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#7 /var/www/postlet/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#8 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#9 /var/www/postlet/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#10 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#11 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('view', Array)
+#12 /var/www/postlet/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1/post/view', Array)
+#13 /var/www/postlet/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /var/www/postlet/api/public/index.php(13): yii\base\Application->run()
+#15 {main}
+2017-04-16 18:34:38 [192.168.33.1][-][-][info][application] $_GET = [
+    'id' => '13'
+    'auth-key' => '7d3378a616bcf1ee05088ef3144c2bc4'
+]
+
+$_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜÐÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54618'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/post/13?auth-key=7d3378a616bcf1ee05088ef3144c2bc4'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'auth-key=7d3378a616bcf1ee05088ef3144c2bc4'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492367678.372
+    'REQUEST_TIME' => 1492367678
+]
+2017-04-16 18:35:19 [192.168.33.1][-][-][error][Error] Error: Cannot use object of type stdClass as array in /var/www/postlet/vendor/yiisoft/yii2/web/Request.php:448
+Stack trace:
+#0 /var/www/postlet/vendor/yiisoft/yii2/web/Request.php(464): yii\web\Request->getBodyParam('token', NULL)
+#1 /var/www/postlet/api/modules/v1/filters/auth/PostBodyAuth.php(19): yii\web\Request->post('token')
+#2 /var/www/postlet/vendor/yiisoft/yii2/filters/auth/CompositeAuth.php(73): api\modules\v1\filters\auth\PostBodyAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#3 /var/www/postlet/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(59): yii\filters\auth\CompositeAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#4 /var/www/postlet/vendor/yiisoft/yii2/filters/auth/CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#5 /var/www/postlet/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#6 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#7 /var/www/postlet/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#8 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#9 /var/www/postlet/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#10 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#11 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('view', Array)
+#12 /var/www/postlet/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1/post/view', Array)
+#13 /var/www/postlet/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /var/www/postlet/api/public/index.php(13): yii\base\Application->run()
+#15 {main}
+2017-04-16 18:35:19 [192.168.33.1][-][-][info][application] $_GET = [
+    'id' => '13'
+    'auth-key' => '7d3378a616bcf1ee05088ef3144c2bc4'
+]
+
+$_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜÐÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54618'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/post/13?auth-key=7d3378a616bcf1ee05088ef3144c2bc4'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'auth-key=7d3378a616bcf1ee05088ef3144c2bc4'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492367719.8994
+    'REQUEST_TIME' => 1492367719
+]
+2017-04-16 18:42:21 [192.168.33.1][-][-][error][Error] Error: Class 'api\modules\v1\filters\RequestFilter' not found in /var/www/postlet/api/modules/v1/components/ApiController.php:27
+Stack trace:
+#0 /var/www/postlet/api/modules/v1/controllers/PostController.php(25): api\modules\v1\components\ApiController->behaviors()
+#1 /var/www/postlet/vendor/yiisoft/yii2/base/Component.php(650): api\modules\v1\controllers\PostController->behaviors()
+#2 /var/www/postlet/vendor/yiisoft/yii2/base/Component.php(533): yii\base\Component->ensureBehaviors()
+#3 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#4 /var/www/postlet/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('view', Array)
+#7 /var/www/postlet/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1/post/view', Array)
+#8 /var/www/postlet/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/postlet/api/public/index.php(13): yii\base\Application->run()
+#10 {main}
+2017-04-16 18:42:21 [192.168.33.1][-][-][info][application] $_GET = [
+    'id' => '13'
+    'auth-key' => '7d3378a616bcf1ee05088ef3144c2bc4'
+]
+
+$_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜÐÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54710'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/post/13?auth-key=7d3378a616bcf1ee05088ef3144c2bc4'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'auth-key=7d3378a616bcf1ee05088ef3144c2bc4'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492368141.873
+    'REQUEST_TIME' => 1492368141
+]
+2017-04-16 18:42:34 [192.168.33.1][-][-][error][Error] Error: Class 'api\modules\v1\components\RequestFilter' not found in /var/www/postlet/api/modules/v1/components/ApiController.php:26
+Stack trace:
+#0 /var/www/postlet/api/modules/v1/controllers/PostController.php(25): api\modules\v1\components\ApiController->behaviors()
+#1 /var/www/postlet/vendor/yiisoft/yii2/base/Component.php(650): api\modules\v1\controllers\PostController->behaviors()
+#2 /var/www/postlet/vendor/yiisoft/yii2/base/Component.php(533): yii\base\Component->ensureBehaviors()
+#3 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#4 /var/www/postlet/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('view', Array)
+#7 /var/www/postlet/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1/post/view', Array)
+#8 /var/www/postlet/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/postlet/api/public/index.php(13): yii\base\Application->run()
+#10 {main}
+2017-04-16 18:42:34 [192.168.33.1][-][-][info][application] $_GET = [
+    'id' => '13'
+    'auth-key' => '7d3378a616bcf1ee05088ef3144c2bc4'
+]
+
+$_COOKIE = [
+    '_csrf' => 'bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AJ}3pƒ5q¹ÃînØÜÐÆHh .’^ñ»Í£\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=bac807f06898d886fcc2e1e5e076a18033e98e64b2f164e6e84d032c8e39f808a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22A%07J%7D3p%835%02%1Eq%B9%C3%EEn%D8%08%0F%DC%D0%C6Hh+.%0E%92%5E%F1%BB%CD%A3%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54710'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/post/13?auth-key=7d3378a616bcf1ee05088ef3144c2bc4'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'auth-key=7d3378a616bcf1ee05088ef3144c2bc4'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492368154.5729
+    'REQUEST_TIME' => 1492368154
+]
+2017-04-16 18:43:37 [192.168.33.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in /var/www/postlet/vendor/yiisoft/yii2/filters/auth/AuthMethod.php:91
+Stack trace:
+#0 /var/www/postlet/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(74): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 /var/www/postlet/vendor/yiisoft/yii2/filters/auth/CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 /var/www/postlet/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /var/www/postlet/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /var/www/postlet/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('view', Array)
+#9 /var/www/postlet/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1/post/view', Array)
+#10 /var/www/postlet/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/postlet/api/public/index.php(13): yii\base\Application->run()
+#12 {main}
+2017-04-16 18:43:37 [192.168.33.1][-][-][info][application] $_GET = [
+    'id' => '13'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a18925ab4752e943a04740c9a8e42320784213ff4d7102f88ac1068c2a2268b9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"l“\'©]§3~t:{\'•ÌØš¦æDaÿŽ½5¬eEÉi\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=a18925ab4752e943a04740c9a8e42320784213ff4d7102f88ac1068c2a2268b9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%07l%93%27%A9%5D%A73%7Et%3A%12%7B%27%95%CC%D8%9A%A6%E6Da%FF%8E%BD5%ACeE%C9i%1B%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'e04dd7c4-2ba7-f720-c233-d59787339d15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54727'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/post/13'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => 'application/json'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492368217.7084
+    'REQUEST_TIME' => 1492368217
+]
+2017-04-16 18:50:38 [192.168.33.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in /var/www/postlet/vendor/yiisoft/yii2/filters/auth/AuthMethod.php:91
+Stack trace:
+#0 /var/www/postlet/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(74): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 /var/www/postlet/vendor/yiisoft/yii2/filters/auth/CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 /var/www/postlet/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /var/www/postlet/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /var/www/postlet/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/postlet/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 /var/www/postlet/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#9 /var/www/postlet/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('v1/post/create', Array)
+#10 /var/www/postlet/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/postlet/api/public/index.php(13): yii\base\Application->run()
+#12 {main}
+2017-04-16 18:50:38 [192.168.33.1][-][-][info][application] $_POST = [
+    'name' => 'JonTest'
+    'username' => 'anothertestforjon'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a18925ab4752e943a04740c9a8e42320784213ff4d7102f88ac1068c2a2268b9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"l“\'©]§3~t:{\'•ÌØš¦æDaÿŽ½5¬eEÉi\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_COOKIE' => '_csrf=a18925ab4752e943a04740c9a8e42320784213ff4d7102f88ac1068c2a2268b9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%07l%93%27%A9%5D%A73%7Et%3A%12%7B%27%95%CC%D8%9A%A6%E6Da%FF%8E%BD5%ACeE%C9i%1B%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'HTTP_ORIGIN' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '5057d081-985f-1558-4fed-20754767038c'
+    'HTTP_CONTENT_LENGTH' => '39'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api.postlet.dev'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.33.33'
+    'REMOTE_PORT' => '54826'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'SERVER_SOFTWARE' => 'nginx/1.4.6'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/postlet/api/public'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/post'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/postlet/api/public/index.php'
+    'CONTENT_LENGTH' => '39'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1492368638.5242
+    'REQUEST_TIME' => 1492368638
+]

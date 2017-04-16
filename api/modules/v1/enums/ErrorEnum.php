@@ -6,4 +6,5 @@ abstract class ErrorEnum {
   const Invalid   = 'INVALID';
   const Missing   = 'MISSING';
   const Malformed = 'MALFORMED';
+  const Exists    = 'EXISTS';
 }

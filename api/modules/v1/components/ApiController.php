@@ -7,7 +7,6 @@ use yii\web\Response as YiiResponse;
 
 use api\modules\v1\enums\HttpEnum;
 
-use api\modules\v1\filters\RequestFilter;
 use api\modules\v1\filters\ResponseFilter;
 
 class ApiController extends YiiController
@@ -24,8 +23,7 @@ class ApiController extends YiiController
   {
     $behaviors = parent::behaviors();
 
-    $behaviors['requestFilter'] = [ 'class' => RequestFilter::className()];
-    $behaviors['responseFilter'] = [ 'class' => ResponseFilter::className()];
+    $behaviors['responseFilter'] = ['class' => ResponseFilter::className()];
 
     return $behaviors;
   }

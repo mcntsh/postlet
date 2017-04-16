@@ -34,9 +34,9 @@ class Account extends BaseModel implements IdentityInterface
     return static::findOne(['auth_key' => $token]);
   }
 
-  public static function findByUsername($username)
+  public static function findByEmail($email)
   {
-    return static::findOne(['username' => $username]);
+    return static::findOne(['email' => $email]);
   }
 
   public static function findByPasswordResetToken($token)

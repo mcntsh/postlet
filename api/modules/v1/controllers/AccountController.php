@@ -21,6 +21,11 @@ class AccountController extends ApiController
 
     $payload = Yii::$app->request->post();
 
+    if(Account::findByEmail($payload->email)) {
+      $this->addError('email', ErrorEnum::Exists, 'An account with this email is already registered.');
+      return $this->returnAndRespond(HttpEnum::Conflict);
+    }
+
     $account = new Account();
     $account->email = $payload->email;
     $account->password = $account->setPassword($payload->password);
@@ -39,7 +44,7 @@ class AccountController extends ApiController
     $this->setResponseCode(HttpEnum::Ok);
 
     if(!$account = Account::findOne($id)) {
-      return $this->returnAndRespond(HttpEnum::NotFound);
+      return $this->returnAndRespond(HttpEnum::Conflict);
     }
 
     return $account;
