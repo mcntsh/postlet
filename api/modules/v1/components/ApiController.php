@@ -35,7 +35,12 @@ class ApiController extends YiiController
 
   public function addModelErrors($errors)
   {
-    return $this->_errors[$key] = array_push($this->_errors[$key], $errors);
+    if(empty($errors)) {
+      return;
+    }
+
+    array_push($this->_errors, $errors);
+    return $this->_errors;
   }
 
   public function addError($key, $code, $message = '')

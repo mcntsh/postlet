@@ -55,9 +55,23 @@ class PostController extends ApiController
       return $this->returnAndRespond(HttpEnum::BadRequest);
     }
 
+    $userIp = Yii::$app->request->getUserIP();
+    $userAgent = Yii::$app->request->getUserAgent();
+    $userReferrer = Yii::$app->request->getReferrer();
+
     $post = new Post();
     $post->body = Json::encode($payload);
-    $post->request_origin = $headers->get('origin');
+    $post->user_ip = $userIp;
+    $post->user_agent = $userAgent;
+    $post->user_referrer = $userReferrer;
+
+    if(!$post->user_referrer) {
+      $post->user_referrer = $headers->get('origin');
+    }
+
+    if($post->checkSpam()) {
+      return $this->returnAndRespond(HttpEnum::Forbidden, 'This post was flagged as spam by our system');
+    }
 
     if(!$post->save()) {
       $this->addModelErrors($post->getErrors());

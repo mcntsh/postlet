@@ -1,5 +1,7 @@
 <?php
 
 return [
-  'adminEmail' => 'admin@example.com',
+  'siteUrl' => 'http://api.postlet.dev',
+  'testMode' => false,
+  'akismetAPIKey' => '8161747b44b0',
 ];

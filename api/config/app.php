@@ -61,7 +61,7 @@ $config = [
       ],
     ],
   ],
-  'params' => $params,
+  'params' => require($PROJECT_ROOT . '/common/config/params.php'),
 ];
 
 return $config;
